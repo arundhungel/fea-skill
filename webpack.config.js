@@ -60,7 +60,6 @@ module.exports = {
             options: {
               name: '[name].[ext]',
               outputPath: 'images/',
-              publicPath: 'images/'
             }
           }
         ]
@@ -79,7 +78,6 @@ module.exports = {
       filename: 'index.html',
       template: 'src/index.html.ejs',
       minify: {
-        removeAttributeQuotes: true,
         collapseWhitespace: true,
         removeComments: true
       }

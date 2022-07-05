@@ -7,6 +7,28 @@ $grid-breakpoints: (xs: 0,
   xxl: 1680px,
   xxxl: 1920px);
 
+$container-max-widths: (
+  xs: 511px,
+  sm: 689px,
+  md: 863px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1440px,
+);
+
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+  6: $spacer * 3,
+  7: $spacer * 3.75,
+);
+
 // Color theme
 $primary: #003A92;
 $danger: #8C2531;
@@ -15,3 +37,22 @@ $body-bg: $bg-dusty-pink;
 
 // Prefix for :root CSS variables
 $variable-prefix: fea-;
+
+// Navigation bar
+$navbar-padding-y: $spacer * 4;
+
+$navbar-light-color: $body-color;
+$navbar-light-hover-color: $primary;
+$navbar-light-active-color: $primary;
+$navbar-nav-link-padding-x: $spacer * 1.875;
+
+$navbar-toggler-padding-y: 0;
+$navbar-toggler-padding-x: 0;
+$navbar-toggler-border-radius: 0;
+$navbar-toggler-focus-width: 0;
+$navbar-light-toggler-icon-bg: none;
+
+img, svg {
+    display: block;
+    max-width: 100%;
+}
