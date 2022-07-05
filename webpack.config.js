@@ -12,7 +12,7 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: '[name].[contenthash].js',
     clean: true,
-    assetModuleFilename: '[name][ext]',
+    assetModuleFilename: 'images/[name][ext]',
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -52,17 +52,8 @@ module.exports = {
       },
 
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'images/',
-            }
-          }
-        ]
       },
     ],
   },

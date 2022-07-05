@@ -6,6 +6,13 @@
             padding-right: 0;
         }
     }
+
+    &-item:first-child {
+        #{$this}-link {
+            padding-left: 0;
+        }
+    }
+
     &-link {
         font-size: $font-size-sm;
         line-height: $line-height-sm;
@@ -17,8 +24,13 @@
 }
 
 .navbar {
+    transition: background-color 0.35s ease;
+    @include media-breakpoint-down(lg) { 
+        padding-block: $spacer * 3;
+    }
+
     @include media-breakpoint-down(md) { 
-        padding-inline: $spacer * 2;
+        padding-block: $spacer * 2;
     }
 
     &-brand {
@@ -56,24 +68,98 @@
             }
         }
 
-        &:not(.collapsed) {
-            #{$this}-icon {
+    }
+
+    .dropdown-toggle::after {
+        display: none;
+    }
+
+    .dropdown-menu {
+        font-size: $font-size-sm;
+        border: 1px solid rgba(196, 196, 196, 0.1);
+        margin: 0;
+        top: 140%
+    }
+
+    @include media-breakpoint-down(md) { 
+        .navbar-brand--primary img {
+            height: 32px;
+        }
+        
+        &-bg-blue {
+            background-color: $primary !important;
+            
+            .navbar-toggler-icon {
                 &:before {
                     transform: rotate(45deg);
                     transform-origin: 10% 10%;
+                    background-color: $white;
                 }
 
                 span {
                     opacity: 0;
                     filter: alpha(opacity=0);
+                    background-color: $white;
                 }
 
                 &::after {
                     transform: rotate(-45deg);
                     transform-origin: 0% 60%;
+                    background-color: $white;
+                }
+            }
+
+            .nav-item {
+                padding-block: $spacer;
+                border-top: 1px solid rgba(196, 196, 196, 0.1);
+            }
+            .nav-link {
+                color: $white;
+                display: block;
+                transition: all .3s ease;
+                
+                &:hover {
+                    font-weight: 500;
+                    letter-spacing: .2px;
+                }
+                
+                &.active {
+                    color: $white;
+                }
+            }
+
+            span.nav-link {
+                &:hover {
+                    font-weight: 400;
+                }
+            }
+
+            .navbar-nav {
+                margin-top: $spacer * 4;
+            }
+
+            .dropdown {
+
+                &-menu {
+                    display: block;
+                    background-color: transparent;
+                    border: none;
+                    padding-top: $spacer;
+                    padding-bottom: 0;
+                }
+
+                &-item {
+                    color: $white;
+                    padding-left: $spacer * 2;
+                    transition: all .3s ease;
+
+                    &:hover, &:focus {
+                        background-color: transparent;
+                        font-weight: 500;
+                        letter-spacing: .2px;
+                    }
                 }
             }
         }
     }
-    
 }

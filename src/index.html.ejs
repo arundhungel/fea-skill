@@ -30,28 +30,46 @@
     </header>
 
     <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg bg-white">
+    <nav class="navbar navbar-expand-md bg-white">
         <div class="container-xxl px-xl-7 px-lg-6 px-5">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand navbar-brand--primary" href="#">
                 <img src="images/logo.png" alt="Company Logo">
             </a>
 
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand navbar-brand--white hide" href="#">
+                <img src="images/logo-white.png" alt="Company Logo">
+            </a>
+
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navigationBar" aria-controls="navigationBar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon">
                     <span></span>
                 </span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navigationBar">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Founders</a>
+                    <li class="nav-item dropdown">
+                        <span class="nav-link dropdown-toggle" id="navbarFounder" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Founders
+                        </s>
+                        <ul class="dropdown-menu" aria-labelledby="navbarFounder">
+                            <li><a class="dropdown-item" href="#">Maria Kenter</a></li>
+                            <li><a class="dropdown-item" href="#">Roger Septimus</a></li>
+                        </ul>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="#">Beneficiaries</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Scholarships</a>
+                    
+                    <li class="nav-item dropdown">
+                        <span class="nav-link dropdown-toggle" id="navbarScholarship" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Scholarships
+                        </sp>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScholarship">
+                            <li><a class="dropdown-item" href="#">Sed ut tincidunt euismod malesuada</a></li>
+                            <li><a class="dropdown-item" href="#">Nunc, sit in varius pulvinar</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Press</a>

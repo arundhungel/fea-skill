@@ -1,5 +1,6 @@
 node_modules
 .history
+build
 
 ### Sass ###
 .sass-cache/
@@ -32,3 +33,13 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+
+IDE : 
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+.vscode/launch.json
+!.vscode/extensions.json
+.history

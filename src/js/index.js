@@ -1,15 +1,26 @@
 import '../scss/main.scss'
 
-require('../images/sprite.svg')
-require('../images/logo.png')
+import '../images/sprite.svg'
+import '../images/logo.png'
+import '../images/logo-white.png'
 
 // Import Bootstrap js components
 import 'bootstrap/js/dist/collapse';
+import 'bootstrap/js/dist/dropdown';
 
 // Import jquery
 import $ from "jquery";
 
 // Responsive navigation
-$('.navbar-toggler').on('click', function() {
-    $(".navbar").toggleClass('navbar-bg-blue')
-});
+const navigationBar = document.getElementById('navigationBar')
+navigationBar.addEventListener('show.bs.collapse', event => {
+  $('.navbar').addClass('navbar-bg-blue')
+  $('.navbar-brand--white').addClass('show')
+  $('.navbar-brand--primary').addClass('hide')
+})
+
+navigationBar.addEventListener('hidden.bs.collapse', event => {
+    $('.navbar').removeClass('navbar-bg-blue')
+    $('.navbar-brand--white').removeClass('show')
+    $('.navbar-brand--primary').removeClass('hide')
+})
