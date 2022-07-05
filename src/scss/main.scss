@@ -1,19 +1,26 @@
-@import './global/variables';
+@import 'global/variables';
 // Bootstrap Functions
 @import "~bootstrap/scss/functions";
 // Overwrite Css
-@import './global/overwrite';
+@import 'global/overwrite';
 
 // Bootstrap Configuration
 
 @import "~bootstrap/scss/variables";
-// @import 'typography';
+
+@import 'global/typography';
+
 @import "~bootstrap/scss/maps";
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/root";
 @import "~bootstrap/scss/reboot";
 
+@import 'global/map';
+
 // Bootstrap Layouts and Components
 @import "~bootstrap/scss/containers";
 @import "~bootstrap/scss/grid";
 @import "~bootstrap/scss/buttons";
+
+// Components
+@import "component/header"

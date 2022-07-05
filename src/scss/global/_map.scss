@@ -1,0 +1,8 @@
+// Color Map
+$colors: map-remove($colors, "blue", "indigo", "purple", "pink", "red", "orange", "yellow", "green", "teal", "cyan");
+
+// Typography Map
+$display-font-sizes: map-remove($display-font-sizes, '1', '2', '3', '4', '5', '6');
+
+$border-widths: map-remove($border-widths, '2', '3', '4', '5');
+$table-variants: map-remove($table-variants, 'primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark');

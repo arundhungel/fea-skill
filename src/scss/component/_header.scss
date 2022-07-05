@@ -1,0 +1,19 @@
+.header {
+    background-color: $bg-dusty-pink;
+    &__wrapper {
+        padding-block: 22px;
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        column-gap: $spacer * 2;
+
+        &--link {
+            display: block;
+        }
+
+    }
+}

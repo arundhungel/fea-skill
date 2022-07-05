@@ -1,1 +1,17 @@
-// bootstrap overwrites
+// grid system
+$grid-breakpoints: (xs: 0,
+  sm: 576px,
+  md: 786px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1680px,
+  xxxl: 1920px);
+
+// Color theme
+$primary: #003A92;
+$danger: #8C2531;
+$body-color: #3C3C3C;
+$body-bg: $bg-dusty-pink;
+
+// Prefix for :root CSS variables
+$variable-prefix: fea-;
