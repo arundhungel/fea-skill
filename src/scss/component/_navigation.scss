@@ -81,6 +81,13 @@
         top: 140%
     }
 
+    @include media-breakpoint-only(md) { 
+        .nav-link {
+            padding-right: $spacer;
+            padding-left: $spacer;
+        }
+    }
+    
     @include media-breakpoint-down(md) { 
         .navbar-brand--primary img {
             height: 32px;

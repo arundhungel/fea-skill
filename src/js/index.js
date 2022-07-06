@@ -1,8 +1,11 @@
 import '../scss/main.scss'
 
+// Import Images
 import '../images/sprite.svg'
 import '../images/logo.png'
 import '../images/logo-white.png'
+import '../images/hero.jpg'
+import '../images/mission.jpg'
 
 // Import Bootstrap js components
 import 'bootstrap/js/dist/collapse';

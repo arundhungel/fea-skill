@@ -1,0 +1,88 @@
+.btn {
+    display: inline-flex;
+    padding: 0 $spacer * 1.5;
+    border-radius: 2px;
+    white-space: nowrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    line-height: 64px;
+    height: 64px;
+    user-select: none;
+    color: $bg-dark-gray;
+    font-weight: 700;
+    
+    @include media-breakpoint-down(lg) { 
+        padding: 0 $spacer * 1.2;
+        line-height: 56px;
+        height: 56px;
+    }
+
+    @include media-breakpoint-down(md) { 
+        padding: 0 $spacer * 1;
+        line-height: 48px;
+        height: 48px;
+        font-size: $font-size-sm;
+    }
+
+    &-outline-primary {
+        border: 1px solid $bg-mid-gray;
+        background-color: transparent;
+        position: relative;
+    }
+
+    &-arrow {
+        padding-right: 0;
+        &::after {
+            content: url("data:image/svg+xml,%3Csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.14545 8L0 1.77778L1.75584 0L8.77921 7.11111C9.26407 7.60203 9.26407 8.39797 8.77921 8.88889L1.75584 16L0 14.2222L6.14545 8Z' fill='%233C3C3C'/%3E%3C/svg%3E");
+            padding: 0 $spacer * 1.5;
+            margin-left: $spacer * 1.5;
+            border-left: 1px solid $bg-mid-gray;
+            transition-duration: 1s;
+
+            @include media-breakpoint-down(lg) { 
+                padding: 0 $spacer * 1.2;
+                margin-left: $spacer * 1.2;
+            }
+        
+            @include media-breakpoint-down(md) { 
+                padding: 0 $spacer * 1;
+                margin-left: $spacer * 1;
+                font-size: $font-size-sm;
+                content:  url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.91636 7.0001L0 2.02232L1.40467 0.600098L7.02337 6.28899C7.41126 6.68172 7.41126 7.31847 7.02337 7.71121L1.40467 13.4001L0 11.9779L4.91636 7.0001Z' fill='%233C3C3C'/%3E%3C/svg%3E");
+            }
+        }
+    }
+
+    &-primary--animated {
+        transition-property: color;
+        transition-duration: 0.5s;
+        z-index: 1;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: $bg-dusty-pink;
+            transform: scaleX(0);
+            transform-origin: 0 50%;
+            transition-property: transform;
+            transition-duration: 0.35s;
+            transition-timing-function: ease-out;
+            z-index: -1;
+        }
+        &:hover {
+        
+            &:before {
+              transform: scaleX(1);
+            }
+            &:after {
+                transform: translateX(4px);
+            }
+        }
+    }
+}
