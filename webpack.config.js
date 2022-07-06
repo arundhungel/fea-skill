@@ -11,7 +11,7 @@ module.exports = {
     bundle: path.resolve(__dirname, 'src/js/index.js'),
   },
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].js',
     clean: true,
     assetModuleFilename: 'images/[name][ext]',
@@ -19,7 +19,7 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     static: {
-      directory: path.resolve(__dirname, 'build'),
+      directory: path.resolve(__dirname, 'dist'),
     },
     port: 8000,
     open: true,
@@ -73,7 +73,7 @@ module.exports = {
     new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" }),
     
     new CleanWebpackPlugin({
-      cleanAfterEveryBuildPatterns: ['build']
+      cleanAfterEveryBuildPatterns: ['dist']
     }),
 
     new HtmlWebpackPlugin({
