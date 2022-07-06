@@ -13,7 +13,6 @@ import '../images/bene-1.png'
 import '../images/bene-2.png'
 import '../images/bene-3.png'
 
-
 // Import Bootstrap js components
 import 'bootstrap/js/dist/collapse';
 import 'bootstrap/js/dist/dropdown';

@@ -20,6 +20,11 @@
         }
     }
 
+    .media__content--subtitle {
+        font-size: $font-size-sm;
+        color: #74788A;
+    }
+
     &__media {
         &--wrapper {
             display: flex;

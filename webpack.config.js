@@ -1,7 +1,9 @@
 const path = require('path')
+const glob = require('glob')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const PurgecssPlugin = require('purgecss-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -53,11 +55,16 @@ module.exports = {
       
       {
         test: /\.html$/i,
-        loader: 'html-loader',
+        type: 'asset/resource',
       },
 
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
       },
     ],
@@ -77,6 +84,10 @@ module.exports = {
         collapseWhitespace: true,
         removeComments: true
       }
+    }),
+
+    new PurgecssPlugin({
+      paths: glob.sync(`${path.join(__dirname, 'src')}/**/*`,  { nodir: true }),
     }),
   ],
 }
