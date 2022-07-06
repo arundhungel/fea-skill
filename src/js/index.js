@@ -6,6 +6,13 @@ import '../images/logo.png'
 import '../images/logo-white.png'
 import '../images/hero.jpg'
 import '../images/mission.jpg'
+import '../images/maria.jpg'
+import '../images/roger.png'
+
+import '../images/bene-1.png'
+import '../images/bene-2.png'
+import '../images/bene-3.png'
+
 
 // Import Bootstrap js components
 import 'bootstrap/js/dist/collapse';

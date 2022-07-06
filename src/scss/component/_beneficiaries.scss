@@ -1,0 +1,118 @@
+.beneficiaries__section {
+    padding-bottom: 120px;
+
+    @include media-breakpoint-down(lg) {  
+        padding-bottom: 90px;
+    }
+
+    @include media-breakpoint-down(md) {  
+        padding-bottom: 60px;
+    }
+
+    @include media-breakpoint-down(sm) {  
+        padding-bottom: 40px;
+    }
+
+    .section__heading {
+        color: $primary;
+    }
+}
+
+.beneficiaries__media {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    flex-wrap: nowrap;
+
+    @include media-breakpoint-down(lg) {  
+        gap: 40px;
+    }
+
+    @include media-breakpoint-down(md) {  
+        gap: 30px;
+    }
+
+    @include media-breakpoint-down(sm) {  
+        gap: 16px;
+    }
+
+    .media {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+.media {
+    &__img img {
+        width: 100%;
+    }
+    &__content {
+        color: $bg-dark-gray;
+
+        h2, h3, p {
+            font-weight: 400;
+        }
+
+        &--subtitle {
+            margin-top: $spacer;
+            display: block;
+            line-height: 1.4;
+
+            @include media-breakpoint-down(md) {  
+                margin-top: $spacer * .75
+            }
+        }
+        
+    }
+
+    &--bordered {
+        padding: 40px;
+        border: 1px solid #fff;
+        .media__img {
+            max-height: 280px;
+            overflow: hidden;
+        }
+
+        @include media-breakpoint-down(lg) {  
+            padding: 30px;
+        }
+
+        @include media-breakpoint-down(md) {  
+            padding: 24px;
+        }
+
+        @include media-breakpoint-down(sm) {  
+            padding: 16px;
+        }
+
+        .media__content {
+            margin-top: 16px;
+        }
+    }
+
+    &__date {
+        margin-bottom: 16px;
+        font-size: $font-size-sm;
+        letter-spacing: 0.05em;
+        font-weight: 700;
+
+        span {
+            text-transform: uppercase;
+
+            + span {
+                padding-left: 40px;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    background-color: #74788A;
+                    position: absolute;
+                    left: 2px;
+                    height: 1px;
+                    width: 30px;
+                    top: 50%;
+                }
+            }
+        }
+    }
+}
