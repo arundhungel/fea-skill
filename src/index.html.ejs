@@ -8,151 +8,134 @@
 </head>
 <body>
 
-    <div class="container-fluid me-0 pe-0 ps-xl-7 ps-lg-6 ps-md-5 ps-sm-4 ps-3">
-        <!-- Header with Social link -->
-        <header class="header">
-            <div class="container-xxl px-xl-7 px-lg-6 px-md-6 px-5">
-                <div class="header__wrapper"> 
-                    <div class="header__social">
-                        <a href="#" class="header__social--link">
-                            <svg width="20" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16">
-                                <use href="images/sprite.svg#twitter"></use>
-                            </svg>
-                        </a>
+    <section class="site__main">
+        <div class="container-fluid me-0 pe-0 ps-xl-7 ps-lg-6 ps-md-5 ps-sm-4 ps-3">
+            <!-- Header with Social link -->
+            <header class="header">
+                <div class="container-xxl px-xl-7 px-lg-6 px-md-6 px-5">
+                    <div class="header__wrapper"> 
+                        <div class="header__social">
+                            <a href="#" class="header__social--link">
+                                <svg width="20" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16">
+                                    <use href="images/sprite.svg#twitter"></use>
+                                </svg>
+                            </a>
 
-                        <a href="#" class="header__social--link">
-                            <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 16">
-                                <use href="images/sprite.svg#linkedin"></use>
-                            </svg>
-                        </a>
+                            <a href="#" class="header__social--link">
+                                <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 16">
+                                    <use href="images/sprite.svg#linkedin"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Navigation bar -->
+            <nav class="navbar navbar-expand-md bg-white">
+                <div class="container-xxl px-xl-7 px-lg-6 px-md-6 px-5 ps-md-5 ps-sm-5 ps-3">
+                    <a class="navbar-brand navbar-brand--primary" href="#">
+                        <img src="images/logo.png" alt="Company Logo">
+                    </a>
+
+                    <a class="navbar-brand navbar-brand--white hide" href="#">
+                        <img src="images/logo-white.png" alt="Company Logo">
+                    </a>
+
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navigationBar" aria-controls="navigationBar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <span></span>
+                        </span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navigationBar">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item dropdown">
+                                <span class="nav-link dropdown-toggle" id="navbarFounder" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Founders
+                                </s>
+                                <ul class="dropdown-menu" aria-labelledby="navbarFounder">
+                                    <li><a class="dropdown-item" href="#">Maria Kenter</a></li>
+                                    <li><a class="dropdown-item" href="#">Roger Septimus</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Beneficiaries</a>
+                            </li>
+                            
+                            <li class="nav-item dropdown">
+                                <span class="nav-link dropdown-toggle" id="navbarScholarship" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Scholarships
+                                </sp>
+                                <ul class="dropdown-menu" aria-labelledby="navbarScholarship">
+                                    <li><a class="dropdown-item" href="#">Sed ut tincidunt euismod malesuada</a></li>
+                                    <li><a class="dropdown-item" href="#">Nunc, sit in varius pulvinar</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Press</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Hero Component -->
+            <div class="hero bg-white">
+                <div class="container-xxl px-xl-7 px-lg-6 px-5 pb-xl-7 pb-lg-6 pb-md-6 pb-5 ps-sm-5 ps-3">
+                    <div class="hero__content">
+                        <h1 class="hero__title">
+                            Ullamcorper diam turpis egestas egestas fames enim risus sed proin
+                        </h1>
+                        <button class="btn btn-outline-primary btn-primary--animated btn-lg btn-arrow">
+                            Read More
+                        </button>
+                    </div>
+                </div>
+                <div class="container-fluid ps-xl-7 ps-lg-6 ps-sm-5 ps-3 pb-xl-7 pb-lg-6 pb-md-6 pb-5 pe-0 hero__media--container">
+                    <div class="hero__media">
+                        <img src="images/hero.jpg" alt="Company - Hero Banner">
                     </div>
                 </div>
             </div>
-        </header>
-
-        <!-- Navigation bar -->
-        <nav class="navbar navbar-expand-md bg-white">
-            <div class="container-xxl px-xl-7 px-lg-6 px-md-6 px-5 ps-md-5 ps-sm-5 ps-3">
-                <a class="navbar-brand navbar-brand--primary" href="#">
-                    <img src="images/logo.png" alt="Company Logo">
-                </a>
-
-                <a class="navbar-brand navbar-brand--white hide" href="#">
-                    <img src="images/logo-white.png" alt="Company Logo">
-                </a>
-
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navigationBar" aria-controls="navigationBar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">
-                        <span></span>
-                    </span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navigationBar">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item dropdown">
-                            <span class="nav-link dropdown-toggle" id="navbarFounder" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Founders
-                            </s>
-                            <ul class="dropdown-menu" aria-labelledby="navbarFounder">
-                                <li><a class="dropdown-item" href="#">Maria Kenter</a></li>
-                                <li><a class="dropdown-item" href="#">Roger Septimus</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Beneficiaries</a>
-                        </li>
-                        
-                        <li class="nav-item dropdown">
-                            <span class="nav-link dropdown-toggle" id="navbarScholarship" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Scholarships
-                            </sp>
-                            <ul class="dropdown-menu" aria-labelledby="navbarScholarship">
-                                <li><a class="dropdown-item" href="#">Sed ut tincidunt euismod malesuada</a></li>
-                                <li><a class="dropdown-item" href="#">Nunc, sit in varius pulvinar</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Press</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Hero Section -->
-        <section class="hero bg-white">
-            <div class="container-xxl px-xl-7 px-lg-6 px-5 pb-xl-7 pb-lg-6 pb-md-6 pb-5 ps-sm-5 ps-3">
-                <div class="hero__content">
-                    <h1 class="hero__title">
-                        Ullamcorper diam turpis egestas egestas fames enim risus sed proin
-                    </h1>
-                    <button class="btn btn-outline-primary btn-primary--animated btn-lg btn-arrow">
-                        Read More
-                    </button>
-                </div>
-            </div>
-            <div class="container-fluid ps-xl-7 ps-lg-6 ps-sm-5 ps-3 pb-xl-7 pb-lg-6 pb-md-6 pb-5 pe-0 hero__media--container">
-                <div class="hero__media">
-                    <img src="images/hero.jpg" alt="Company - Hero Banner">
-                </div>
-            </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
     
     <!-- News -->
-    <div class="container-fluid me-0 pe-0 ps-xl-7 ps-lg-6 ps-md-5 ps-sm-4 ps-3">
-        <section class="news">
-            <div class="container-xxl px-xl-7 px-lg-6 px-5 pb-xl-7 pb-lg-6 pb-md-6 pb-5 ps-sm-5 ps-3 pe-sm-0 pe-md-5">
-                <div class="hero__content pb-5">
-                    <h5 class="section__heading">
-                        latest news
-                    </h5>
-                </div>
-
-                <div class="news__media">
-                    <div class="news__media--wrapper">
-                        <div class="media media--bordered">
-                            <div class="media__img">
-                                <img src="images/bene-1.png" alt="Beneficiaries One">
-                            </div>
-                            <div class="media__content">
-                                <div class="media__date">
-                                    <span>
-                                        november 19
-                                    </span>
-                                    <span>
-                                        2020
-                                    </span>
-                                </div>
-                                <h2>
-                                    Molestie molesti metus, tempus in commodo, semper tellus
-                                </h2>
-                            </div>
-                        </div>
+    <section class="news__section">
+        <div class="container-fluid me-0 pe-0 ps-xl-7 ps-lg-6 ps-md-5 ps-sm-4 ps-3">
+            <div class="news">
+                <div class="container-xxl px-xl-7 px-lg-6 px-5 pb-xl-7 pb-lg-6 pb-md-6 pb-5 ps-sm-5 ps-3 pe-sm-0 pe-md-5">
+                    <div class="hero__content pb-5">
+                        <h5 class="section__heading">
+                            latest news
+                        </h5>
                     </div>
-                    
-                    <div class="news__media--wrapper">
-                        <div class="media media--bordered">
-                            <div class="media__img">
-                                <img src="images/bene-1.png" alt="Beneficiaries One">
-                            </div>
-                            <div class="media__content">
-                                <div class="media__date">
-                                    <span>
-                                        november 19
-                                    </span>
-                                    <span>
-                                        2020
-                                    </span>
+
+                    <div class="news__media">
+                        <div class="news__media--wrapper">
+                            <div class="media media--bordered">
+                                <div class="media__img">
+                                    <img src="images/bene-1.png" alt="Beneficiaries One">
                                 </div>
-                                <h3>
-                                    Molestie molesti metus, tempus in commodo, semper tellus
-                                </h3>
+                                <div class="media__content">
+                                    <div class="media__date">
+                                        <span>
+                                            november 19
+                                        </span>
+                                        <span>
+                                            2020
+                                        </span>
+                                    </div>
+                                    <h2>
+                                        Molestie molesti metus, tempus in commodo, semper tellus
+                                    </h2>
+                                </div>
                             </div>
                         </div>
                         
@@ -170,66 +153,90 @@
                                             2020
                                         </span>
                                     </div>
-                                    <p>
+                                    <h3>
                                         Molestie molesti metus, tempus in commodo, semper tellus
-                                    </p>
+                                    </h3>
                                 </div>
                             </div>
-
-                            <div class="media media--bordered">
-                                <div class="media__img">
-                                    <img src="images/bene-1.png" alt="Beneficiaries One">
-                                </div>
-                                <div class="media__content">
-                                    <div class="media__date">
-                                        <span>
-                                            november 19
-                                        </span>
-                                        <span>
-                                            2020
-                                        </span>
+                            
+                            <div class="news__media--wrapper">
+                                <div class="media media--bordered">
+                                    <div class="media__img">
+                                        <img src="images/bene-1.png" alt="Beneficiaries One">
                                     </div>
-                                    <p>
-                                        Molestie molesti metus, tempus in commodo, semper tellus
-                                    </p>
+                                    <div class="media__content">
+                                        <div class="media__date">
+                                            <span>
+                                                november 19
+                                            </span>
+                                            <span>
+                                                2020
+                                            </span>
+                                        </div>
+                                        <p>
+                                            Molestie molesti metus, tempus in commodo, semper tellus
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="media media--bordered">
+                                    <div class="media__img">
+                                        <img src="images/bene-1.png" alt="Beneficiaries One">
+                                    </div>
+                                    <div class="media__content">
+                                        <div class="media__date">
+                                            <span>
+                                                november 19
+                                            </span>
+                                            <span>
+                                                2020
+                                            </span>
+                                        </div>
+                                        <p>
+                                            Molestie molesti metus, tempus in commodo, semper tellus
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <button class="btn-link btn-arrow">
+                        See all news
+                    </button>
                 </div>
             </div>
-
-        </section>
-    </div>
+        </div>
+    </section>
 
     <!-- Our Mission -->
-    <div class="container-fluid ms-0 ps-0 pe-xl-7 pe-lg-6 pe-md-5 pe-sm-4 pe-3">
-        <section class="hero mission">
-            <div class="container-xxl px-xl-7 px-lg-6 px-5 py-xl-7 py-lg-6 py-md-6 py-4">
-                <div class="hero__content ps-xl-7 ps-lg-6 ps-sm-4 ps-md-5 ps-0">
-                    <h5 class="section__heading">
-                        Our Mission
-                    </h5>
-                    <h2 class="hero__title">
-                        Imperdiet quis leo scelerisque nunc magna mattis vitae non non
-                    </h2>
-                    <p class="hero__subtitle">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                    </p>
+    <section class="mission__section">
+        <div class="container-fluid ms-0 ps-0 pe-xl-7 pe-lg-6 pe-md-5 pe-sm-4 pe-3">
+            <div class="hero mission">
+                <div class="container-xxl px-xl-7 px-lg-6 px-5 py-xl-7 py-lg-6 py-md-6 py-4">
+                    <div class="hero__content ps-xl-7 ps-lg-6 ps-sm-4 ps-md-5 ps-0">
+                        <h5 class="section__heading">
+                            Our Mission
+                        </h5>
+                        <h2 class="hero__title">
+                            Imperdiet quis leo scelerisque nunc magna mattis vitae non non
+                        </h2>
+                        <p class="hero__subtitle">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="container-fluid pe-xl-7 pe-lg-6 pe-sm-5 pe-3 pb-xl-7 pb-lg-6 pb-md-6 pb-5 ps-0 hero__media--container">
-                <div class="hero__media">
-                    <img src="images/mission.jpg" alt="Company - Our Mission">
+                <div class="container-fluid pe-xl-7 pe-lg-6 pe-sm-5 pe-3 pb-xl-7 pb-lg-6 pb-md-6 pb-5 ps-0 hero__media--container">
+                    <div class="hero__media">
+                        <img src="images/mission.jpg" alt="Company - Our Mission">
+                    </div>
                 </div>
-            </div>
-        </section>
-    </div>
+            </d>
+        </div>
+    </section>
 
-    
     <!-- the beneficiaries -->
-    
     <section class="beneficiaries__section bg-white">
         <div class="container-fluid me-0 pe-0 ps-xl-7 ps-lg-6 ps-md-5 ps-sm-4 ps-3">
             <div class="container-xxl px-xl-7 px-lg-6 px-5 py-xl-7 py-lg-6 py-md-6 pb-5 ps-sm-5 ps-3 pt-5">
@@ -334,56 +341,130 @@
         </div>
     </section>
 
-     <!-- News -->
-     <div class="container-fluid me-0 pe-0 ps-xl-7 ps-lg-6 ps-md-5 ps-sm-4 ps-3">
-        <section class="gallery">
-            <div class="container-xxl px-xl-7 px-lg-6 px-5 pb-xl-7 pb-lg-6 pb-md-6 pb-5 ps-sm-5 ps-3 pe-sm-0 pe-md-5">
-                <div class="hero__content pb-5">
-                    <h5 class="section__heading">
-                        Gallery
-                    </h5>
-                </div>
+     <!-- Gallery -->
+    <section class="gallery__section">
+        <div class="container-fluid me-0 pe-0 ps-xl-7 ps-lg-6 ps-md-5 ps-sm-4 ps-3 bg-white">
+            <div class="gallery">
+                <div class="container-xxl px-xl-7 px-lg-6 px-5 pb-xl-7 pb-lg-6 pb-md-6 pb-5 ps-sm-5 ps-3 pe-sm-0 pe-md-5">
+                    <div class="hero__content pb-5">
+                        <h5 class="section__heading">
+                            Gallery
+                        </h5>
+                    </div>
 
-                <div class="gallery__media">
-                    <div class="gallery__media--wrapper">
-                        <div class="media media--bordered">
-                            <div class="media__img">
-                                <img src="images/mission.jpg" alt="Beneficiaries One">
+                    <div class="gallery__media">
+                        <div class="gallery__media--wrapper">
+                            <div class="media media--bordered">
+                                <div class="media__img">
+                                    <img src="images/mission.jpg" alt="Beneficiaries One">
+                                </div>
+                                <div class="media__content">
+                                    <span class="media__content--subtitle">
+                                        Caption lorem ipsum dolor sit amet
+                                    </span>
+                                </div>
                             </div>
-                            <div class="media__content">
-                                <span class="media__content--subtitle">
-                                    Caption lorem ipsum dolor sit amet
-                                </span>
+                            
+                            <div class="media media--bordered">
+                                <div class="media__img">
+                                    <img src="images/bene-1.png" alt="Beneficiaries One">
+                                </div>
+                                <div class="media__content">
+                                    <span class="media__content--subtitle">
+                                        Caption lorem ipsum dolor sit amet
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="media media--bordered">
-                            <div class="media__img">
-                                <img src="images/bene-1.png" alt="Beneficiaries One">
-                            </div>
-                            <div class="media__content">
-                                <span class="media__content--subtitle">
-                                    Caption lorem ipsum dolor sit amet
-                                </span>
-                            </div>
-                        </div>
 
-                        <div class="media media--bordered">
-                            <div class="media__img">
-                                <img src="images/hero.jpg" alt="Beneficiaries One">
-                            </div>
-                            <div class="media__content">
-                                <span class="media__content--subtitle">
-                                    Caption lorem ipsum dolor sit amet
-                                </span>
+                            <div class="media media--bordered">
+                                <div class="media__img">
+                                    <img src="images/hero.jpg" alt="Beneficiaries One">
+                                </div>
+                                <div class="media__content">
+                                    <span class="media__content--subtitle">
+                                        Caption lorem ipsum dolor sit amet
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-        </section>
-    </div>
+    <!-- Footer Section -->
+    <footer class="px-xl-7 px-lg-6 px-md-5 px-sm-4 px-3 footer">
+        <div class="container-xxl px-xl-7 px-lg-6 px-5 pb-xl-7 ps-sm-5 ps-3 pe-sm-0 pe-md-5">
+            <div class="footer__logo pb-md-6 pb-4">
+                <a href="#">
+                    <img src="images/logo-white.png" alt="Company Logo">
+                </a>
+            </div>
+
+            <div class="footer__nav">
+                <nav class="navbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Founders</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Beneficiaries</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Scholarships</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Press</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="header__social">
+                        <a href="#" class="header__social--link">
+                            <svg width="20" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16">
+                                <use href="images/sprite.svg#twitterWhite"></use>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="header__social--link">
+                            <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 16">
+                                <use href="images/sprite.svg#linkedinWhite"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="footer__copyright">
+                <nav class="navbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Privacy Policy</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Terms & Conditions</a>
+                        </li>
+                    </ul>
+
+                    <p>
+                        © 2021 Company Name. All rights reserved.
+                    </p>
+                </nav>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

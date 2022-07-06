@@ -9,7 +9,10 @@
     .hero__content {
         position: absolute;
         top: 20px;
-        color: $primary;
+
+        .section__heading {
+            color: $primary;
+        }
          
         @include media-breakpoint-down(md) { 
             position: relative;
@@ -21,6 +24,7 @@
         &--wrapper {
             display: flex;
             align-items: flex-start;
+            overflow: hidden;
 
             .media {
                 flex: 0 0 33.3333%;
