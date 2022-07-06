@@ -1,0 +1,60 @@
+.gallery {
+    padding: 60px 0;
+    background-color: $white;
+
+    > .container-xxl {
+        position: relative;
+    }
+
+    .hero__content {
+        position: absolute;
+        top: 20px;
+        color: $primary;
+         
+        @include media-breakpoint-down(md) { 
+            position: relative;
+            top: 0;
+        }
+    }
+
+    &__media {
+        &--wrapper {
+            display: flex;
+            align-items: flex-start;
+
+            .media {
+                flex: 0 0 33.3333%;
+                max-width: 0 0 33.3333%;
+                
+                @include media-breakpoint-down(md) {   
+                    flex: 0 0 50%;
+                    max-width: 0 0 50%;
+                }
+
+                @include media-breakpoint-down(sm) {   
+                    flex: 0 0 70%;
+                    max-width: 0 0 70%;
+                }
+
+                &:first-child {
+                    margin: 80px 0 40px;
+                    
+                    @include media-breakpoint-down(md) {   
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        .media--bordered {
+            border: 1px solid $bg-dusty-pink;
+
+            & + .media--bordered {
+                margin-left: -1px;
+            }
+
+            .media__img {
+                max-height: unset;
+            }
+        }
+    }
+}
