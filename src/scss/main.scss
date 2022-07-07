@@ -28,6 +28,10 @@
 @import "~bootstrap/scss/transitions";
 @import "~bootstrap/scss/utilities/api";
 
+
+@import 'global/buttons';
+@import 'global/media';
+
 // Components
 @import "component/header";
 @import "component/navigation";
@@ -38,7 +42,6 @@
 @import "component/gallery";
 @import "component/footer";
 
-@import 'global/buttons';
 
 .hide {
     display: none;

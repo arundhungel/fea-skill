@@ -84,8 +84,8 @@
 
     @include media-breakpoint-only(md) { 
         .nav-link {
-            padding-right: $spacer !important;
-            padding-left: $spacer !important;
+            padding-right: $spacer * 0.75 !important;
+            padding-left: $spacer * 0.75  !important;
         }
 
         .nav-item:last-child .nav-link {
