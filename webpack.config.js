@@ -80,6 +80,7 @@ module.exports = {
       title: 'FEA Skill Test',
       filename: 'index.html',
       template: 'src/index.html.ejs',
+      favicon: "src/images/favicon.ico",
       minify: {
         collapseWhitespace: true,
         removeComments: true
