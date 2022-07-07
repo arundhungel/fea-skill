@@ -4,6 +4,7 @@
   "description": "FEA skill test project",
   "main": "index.js",
   "dependencies": {
+    "gsap": "^3.10.4",
     "jquery": "^3.6.0"
   },
   "devDependencies": {

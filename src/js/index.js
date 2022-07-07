@@ -35,3 +35,5 @@ navigationBar.addEventListener('hidden.bs.collapse', event => {
     $('.navbar-brand--white').removeClass('show')
     $('.navbar-brand--primary').removeClass('hide')
 })
+
+import './animation'
