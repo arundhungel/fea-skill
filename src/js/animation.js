@@ -220,8 +220,8 @@ function galleryMedia(e) {
             ease: "none",
             scrollTrigger: {
                 trigger: ".gallery__section",
-                start: "-10%",
-                end: "20%",
+                start: "90%",
+                end: "30%",
                 scrub: 1,
             }
         });
