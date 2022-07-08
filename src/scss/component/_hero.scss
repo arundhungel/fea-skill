@@ -58,7 +58,11 @@
         margin: 0;
         font-weight: 400;
         z-index: 2;
-        
+
+        @include media-breakpoint-down(lg) {
+            font-size: calc(1.25rem + 3.3vw);
+        }
+
         @include media-breakpoint-down(sm) {
             font-size: 32px;
         }

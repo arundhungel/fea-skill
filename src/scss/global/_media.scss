@@ -1,24 +1,33 @@
 
 .media {
     cursor: pointer;  
+    touch-action: pan-y !important;
+
+    &__img {
+        touch-action: pan-y !important;
+    }
 
     &__img img {
         width: 100%;
         min-height: 170px;
         object-fit: cover;
+        touch-action: pan-y !important;
     }
 
     &__content {
         color: $bg-dark-gray;
+        touch-action: pan-y !important;
 
         h2, h3, p {
             font-weight: 400;
+            touch-action: pan-y !important;
         }
 
         &--subtitle {
             margin-top: $spacer;
             display: block;
             line-height: 1.4;
+            touch-action: pan-y !important;
 
             @include media-breakpoint-down(md) {  
                 margin-top: $spacer * .75
@@ -60,9 +69,11 @@
         font-size: $font-size-sm;
         letter-spacing: 0.05em;
         font-weight: 700;
+        touch-action: pan-y !important;
 
         span {
             text-transform: uppercase;
+            touch-action: pan-y !important;
 
             + span {
                 padding-left: 40px;
