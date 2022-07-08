@@ -100,27 +100,39 @@ var mql = window.matchMedia("(max-width: 785px)")
 
 function newsMedia(e) {
     if (e.matches) {
-        let sections = document.querySelectorAll(".news__media--wrapper .media")[0];
-        let scrollTween = gsap.to(".news__media > .news__media--wrapper", {
+        let sections = document.querySelectorAll(".news__media--wrapper-second .media")[0];
+        let scrollTween = gsap.to(".news__media .news__media--wrapper-second", {
             x: -3 * sections.clientWidth,
             ease: "none",
             scrollTrigger: {
-                trigger: ".news__section",
-                start: "-10% top",
-                end: '=+100',  
+                trigger: ".news__media--wrapper-second",
+                start: "-20% top",
+                end: 'bottom',  
                 scrub: 1,
-                pin: true
             }
         });
 
-        gsap.to(".news__media > .news__media--wrapper", {
-            y: 0,
+        gsap.to(".news__media .news__media--wrapper-second", {
+            y: -80,
             duration: 1,
             scrollTrigger: {
                 trigger: ".news__section",
-                start: "left center",
+                start: "left",
                 containerAnimation: scrollTween,
             }
+        });
+
+        Draggable.create(".news__media .news__media--wrapper-second", {
+            bounds:".news__media",
+            allowNativeTouchScrolling:true,
+            type:"x",
+            throwProps: true,
+            }
+        );
+
+        $( window ).on( "load", function() {
+            $(".news__media .news__media--wrapper-second").css("width", 4 * sections.clientWidth, "max-width",  4 * sections.clientWidth);
+            console.log(sections.clientWidth)
         });
     } 
 };
@@ -185,9 +197,7 @@ window.addEventListener('resize', handleResize)
 // our mission
 
 gsap.to(".hero.mission .hero__media", {
-    yPercent: -60,
     xPercent: 10,
-    scale: 1.1,
     ease: "ease",
     scrollTrigger: {
       trigger: ".mission__section",

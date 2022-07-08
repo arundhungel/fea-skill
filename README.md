@@ -2,7 +2,10 @@
 ## _Task for Frontend UI position_
 
 Author: Arun Dhungel
-Demo `https://fea-skill.vercel.app/`
+
+## Demo
+
+The project is hosted in vercel `https://fea-skill.vercel.app/`
 
 ## Overview
 

@@ -34,9 +34,12 @@
             max-height: 280px;
             overflow: hidden;
         }
+        @include media-breakpoint-down(xl) {  
+            padding: 30px;
+        }
 
         @include media-breakpoint-down(lg) {  
-            padding: 30px;
+            padding: 28px;
         }
 
         @include media-breakpoint-down(md) {  

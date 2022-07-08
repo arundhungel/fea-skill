@@ -38,6 +38,7 @@
         
         @include media-breakpoint-down(md) {  
             align-items:  normal;
+            flex-direction: column;
 
             h2, h3, p {
                 font-size: calc(1.4rem + 1.8vw);
@@ -50,14 +51,25 @@
             flex: 0 0 50%;
             max-width: 50%;
 
-            @include media-breakpoint-down(md) {  
-                flex: 0 0 70%;
-                max-width: 70%;
+            @include media-breakpoint-down(md) {    
+                flex: 0 0 82vw;
+                max-width: 82vw;
+
+                &-second {
+                    flex: unset !important;
+                    max-width: unset !important;
+                    display: flex;
+                }
             }
 
             @include media-breakpoint-down(sm) {  
                 flex: 0 0 90%;
                 max-width: 90%;
+                
+                &-second {
+                    flex: 0 0 90vw;
+                    max-width: 90vw;
+                }
             }
         }
     }
@@ -73,7 +85,7 @@
         border-top-width: 0;
         
         @include media-breakpoint-down(md) {  
-            border-top: 1px;
+            border-top-width: 1px;
         }
     }
 }
@@ -99,11 +111,11 @@
         max-width: 100%;
 
         > div {
-            flex: 0 0 70%;
-            max-width: 70%;
+            flex: 0 0 70vw;
+            max-width: 70vw;
             &.news__media--wrapper {
-                flex: 0 0 140%;
-                max-width: 140%;
+                flex: 0 0 140vw;
+                max-width: 140vw;
             }
         }
     }
@@ -120,5 +132,8 @@
 }
 
 .news__media--wrapper:first-child .media--bordered {
-    border-right: 0;
+    @include media-breakpoint-down(md) {  
+        width: 80vw;
+        flex: 0 0 80vw;
+    }
 }
