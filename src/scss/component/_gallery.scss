@@ -35,13 +35,13 @@
                 max-width: 33.3333%;
 
                 @include media-breakpoint-down(md) {   
-                    flex: 0 0 70%;
-                    max-width: 70%;
+                    flex: 0 0 70vw;
+                    max-width: 70vw;
                 }
 
                 @include media-breakpoint-down(sm) {   
-                    flex: 0 0 90%;
-                    max-width: 90%;
+                    flex: 0 0 90vw;
+                    max-width: 90vw;
                 }
 
                 &:first-child {

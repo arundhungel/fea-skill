@@ -1,7 +1,8 @@
 # FEA Skill Test
 ## _Task for Frontend UI position_
 
-Auther: Arun Dhungel
+Author: Arun Dhungel
+Demo `https://fea-skill.vercel.app/`
 
 ## Overview
 
@@ -73,13 +74,13 @@ This folder contains
 
 ### What is done using webpack
 
-- `js and css` are marked with [contenhash] inorder to assist brower caching
-- `clean-webpack-plugin` is used to clean the /dist folder first after every build pattern is runned.
+- `js and css` are marked with [contenthash] inorder to assist broswer caching
+- `clean-webpack-plugin` is used to clean the /dist folder first after every build pattern is run.
 - `purgecss-webpack-plugin` is used to purge the css that are not in used for the production
  
 **Note**
 
-- Svg sprite may be blocked by broswer while directly running dist/index.html. This issue doesn't exist in developement and while on a server.
+- Svg sprite may be blocked by broswer while directly running dist/index.html. This issue doesn't exist in development and while on a server.
 
 
 [//]: # 

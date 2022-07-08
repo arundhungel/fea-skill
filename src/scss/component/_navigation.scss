@@ -98,7 +98,7 @@
     }
     
     @include media-breakpoint-down(md) { 
-        .navbar-brand--primary img {
+        .navbar-brand img {
             height: 32px;
         }
         

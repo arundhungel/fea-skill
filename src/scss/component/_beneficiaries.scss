@@ -23,6 +23,9 @@
     flex-direction: row;
     gap: 60px;
     flex-wrap: nowrap;
+    touch-action: pan-y;
+    cursor: grab;
+    user-select: none;
 
     @include media-breakpoint-down(xl) {  
         gap: 40px;
@@ -43,20 +46,23 @@
     .media {
         flex: 0 0 20%;
         max-width: 20%;
+        touch-action: pan-y;
+        cursor: grab;
+        user-select: none;
 
         @include media-breakpoint-down(lg) {  
-            flex: 0 0 33.33333%;
-            max-width: 33.33333%;
+            flex: 0 0 33.33333vw;
+            max-width: 33.33333vw;
         }
     
         @include media-breakpoint-down(md) {  
-            flex: 0 0 50%;
-            max-width: 50%;
+            flex: 0 0 50vw;
+            max-width: 50vw;
         }
     
         @include media-breakpoint-down(sm) {    
-            flex: 0 0 70%;
-            max-width: 70%;
+            flex: 0 0 70vw;
+            max-width: 70vw;
         }
     }
 }

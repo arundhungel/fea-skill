@@ -1,9 +1,12 @@
 // GSAP
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Draggable from "gsap/Draggable";
 import Scrollbar from 'smooth-scrollbar';
 
-gsap.registerPlugin(ScrollTrigger);
+import $ from "jquery";
+
+gsap.registerPlugin(ScrollTrigger, Draggable);
 
 
 // Smooth Body Scroll
@@ -150,9 +153,22 @@ function beneficiaryMedia() {
             trigger: ".beneficiaries__section",
             start: "left center",
             containerAnimation: scrollTween,
-        }
+        },
     });
+
+    Draggable.create(".beneficiaries__media--container", {
+        bounds:".beneficiaries__media",
+        allowNativeTouchScrolling:true,
+        type:"x",
+        throwProps: true,
+        }
+    );
 };
+
+$( window ).on( "load", function() {
+    let sections = document.querySelectorAll(".beneficiaries__media--container .media")[0];
+    $(".beneficiaries__media--container").css("width", 12 * sections.clientWidth);
+});
 
 window.addEventListener('load', beneficiaryMedia)
 
@@ -235,6 +251,18 @@ function galleryMedia(e) {
                 containerAnimation: scrollTween,
             }
         });
+
+        Draggable.create(".gallery__media--wrapper", {
+            bounds:".gallery__media",
+            allowNativeTouchScrolling:true,
+            type:"x",
+            throwProps: true,
+            }
+        );
+
+        $( window ).on( "load", function() {
+            $(".gallery__media--wrapper").css("width", 3 * sections.clientWidth);
+        });
     } 
 };
 
@@ -242,6 +270,3 @@ galleryMedia(mql);
 mql.addEventListener('change', galleryMedia, 500);
 
 // gallery scroller ends
-
-
-// Footer Scroller

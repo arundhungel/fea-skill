@@ -53,6 +53,8 @@ $navbar-toggler-focus-width: 0;
 $navbar-light-toggler-icon-bg: none;
 
 img, svg {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
+  height: initial;
+  width: initial;
 }
