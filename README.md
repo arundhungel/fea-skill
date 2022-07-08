@@ -5,7 +5,7 @@ Author: Arun Dhungel
 
 ## Demo
 
-The project is hosted in vercel `https://fea-skill.vercel.app/`
+The project is hosted in vercel `[https://fea-skill.vercel.app/]`
 
 ## Overview
 
