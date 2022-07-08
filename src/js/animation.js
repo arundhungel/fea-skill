@@ -57,15 +57,11 @@ tl.from(".site__main .hero .hero__media", {
         y: 200,
     })
 
-    .from(".nav-link, .nav-item .dropdown-item", {
+    .from("nav .nav-link, .nav .nav-item .dropdown-item", {
         y: 300,
         stagger: 0.2,
-    })
-
-    .from(" footer .header__social--link, .footer__copyright span", {
-        y: 10,
-        stagger: 0.2,
     });
+
 
 gsap.to(".site__main .hero .hero__title", {
     yPercent: 200,
@@ -143,53 +139,54 @@ mql.addEventListener('change', newsMedia, 500);
 
 // beneficiaries scroller
 
-function beneficiaryMedia() {
-    let sections = document.querySelectorAll(".beneficiaries__media--container .media")[0];
-    let scrollTween = gsap.to(".beneficiaries__media--container", {
-        x: -9.5 * sections.clientWidth,
-        ease: "none", // <-- IMPORTANT!
-        scrollTrigger: {
-            trigger: ".beneficiaries__section",
-            start: "-10% top",
-            end: 'bottom',
-            scrub: 1,
-            pin: true
-        }
-    });
+// function beneficiaryMedia() {
+//     let sections = document.querySelectorAll(".beneficiaries__media--container .media")[0];
+//     let scrollTween = gsap.to(".beneficiaries__media--container", {
+//         x: -9.5 * sections.clientWidth,
+//         ease: "none", // <-- IMPORTANT!
+//         scrollTrigger: {
+//             trigger: ".beneficiaries__section",
+//             start: "-10% top",
+//             end: 'bottom',
+//             scrub: 1,
+//             pin: true
+//         }
+//     });
 
-    gsap.to(".beneficiaries__media--container", {
-        y: -80,
-        duration: 1,
-        scrollTrigger: {
-            trigger: ".beneficiaries__section",
-            start: "left center",
-            containerAnimation: scrollTween,
-        },
-    });
+//     gsap.to(".beneficiaries__media--container", {
+//         y: -80,
+//         duration: 1,
+//         scrollTrigger: {
+//             trigger: ".beneficiaries__section",
+//             start: "left center",
+//             containerAnimation: scrollTween,
+//         },
+//     });
 
-    Draggable.create(".beneficiaries__media--container", {
-        bounds:".beneficiaries__media",
-        allowNativeTouchScrolling:true,
-        type:"x",
-        throwProps: true,
-        }
-    );
-};
+// };
+
+Draggable.create(".beneficiaries__media--container", {
+    bounds:".beneficiaries__media",
+    allowNativeTouchScrolling:true,
+    type:"x",
+    throwProps: true,
+    }
+);
 
 $( window ).on( "load", function() {
     let sections = document.querySelectorAll(".beneficiaries__media--container .media")[0];
     $(".beneficiaries__media--container").css("width", 12 * sections.clientWidth);
 });
 
-window.addEventListener('load', beneficiaryMedia)
+// window.addEventListener('load', beneficiaryMedia)
 
-var timer
-function handleResize() {
-  clearTimeout(timer)
-  timer = setTimeout(beneficiaryMedia, 500)
-}
+// var timer
+// function handleResize() {
+//   clearTimeout(timer)
+//   timer = setTimeout(beneficiaryMedia, 500)
+// }
 
-window.addEventListener('resize', handleResize)
+// window.addEventListener('resize', handleResize)
 
 // beneficiaries scroller ends
 
@@ -279,3 +276,15 @@ galleryMedia(mql);
 mql.addEventListener('change', galleryMedia, 500);
 
 // gallery scroller ends
+
+// footer animation
+gsap
+gsap.from("footer .header__social--link, .footer__copyright span", {
+    y: 20,
+    stagger: 0.2,
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".footer",
+        toggleActions: "restart none none none",
+    }
+});
