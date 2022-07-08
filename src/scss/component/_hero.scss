@@ -9,6 +9,11 @@
         
         @include media-breakpoint-down(sm) {
             font-size: 32px;
+            position: sticky;
+            top: 0;
+        }
+        @media screen and (max-width: 420px){
+            font-size: 30px;
         }
     }
 
@@ -52,6 +57,7 @@
         color: $primary;
         margin: 0;
         font-weight: 400;
+        z-index: 2;
         
         @include media-breakpoint-down(sm) {
             font-size: 32px;
@@ -79,7 +85,9 @@
     &.mission {
         background-color: $danger;
         padding-top: 20px;
-
+       &::before {
+            height: 15%;
+        }
         .hero__content {
             display: flex;
             align-items: flex-start;

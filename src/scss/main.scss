@@ -50,3 +50,11 @@
 .show {
     display: block;
 }
+
+body {
+    overflow: hidden;
+}
+
+#scroll-container {
+    height: 100vh;
+}

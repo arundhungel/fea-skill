@@ -1,9 +1,30 @@
 // GSAP
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Scrollbar from 'smooth-scrollbar';
 
 gsap.registerPlugin(ScrollTrigger);
 
+
+// Smooth Body Scroll
+const scroller = document.getElementById('scroll-container');
+
+const bodyScrollBar = Scrollbar.init(scroller, { damping: 0.08, delegateTo: document, alwaysShowTracks: true });
+
+ScrollTrigger.scrollerProxy(scroller, {
+  scrollTop(value) {
+    if (arguments.length) {
+      bodyScrollBar.scrollTop = value;
+    }
+    return bodyScrollBar.scrollTop;
+  }
+});
+
+bodyScrollBar.addListener(ScrollTrigger.update);
+
+ScrollTrigger.defaults({ scroller: scroller });
+
+// Smoothe Body Scroll ends
 
 var tl = gsap.timeline({ defaults: {duration: 1, ease: "ease", opacity:0} } );
 
@@ -35,10 +56,32 @@ tl.from(".site__main .hero .hero__media", {
 
     .from(".nav-link, .nav-item .dropdown-item", {
         y: 300,
-        stagger: 0.3,
+        stagger: 0.2,
+    })
+
+    .from(" footer .header__social--link, .footer__copyright span", {
+        y: 10,
+        stagger: 0.2,
     });
 
-    
+gsap.to(".site__main .hero .hero__title", {
+    yPercent: 200,
+    scale: .7,
+    ease: "ease",
+    color: '#fff',
+    background: 'rgba(0, 0,0,50%)',
+    padding: '15px 20px',
+    scrollTrigger: {
+      trigger: ".site__main .hero__content",
+      scrub: true,
+      start: '-20%',
+      toggleActions: "restart none none none",
+    },
+});
+
+
+// news scroller
+
 gsap.from(".news__media--wrapper .media", {
     y: 1200,
     duration: 1,
@@ -49,6 +92,40 @@ gsap.from(".news__media--wrapper .media", {
     },
     stagger: 0.3,
 });
+
+var mql = window.matchMedia("(max-width: 785px)")
+
+function newsMedia(e) {
+    if (e.matches) {
+        let sections = document.querySelectorAll(".news__media--wrapper .media")[0];
+        let scrollTween = gsap.to(".news__media > .news__media--wrapper", {
+            x: -3 * sections.clientWidth,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".news__section",
+                start: "-10% top",
+                end: '=+100',  
+                scrub: 1,
+                pin: true
+            }
+        });
+
+        gsap.to(".news__media > .news__media--wrapper", {
+            y: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".news__section",
+                start: "left center",
+                containerAnimation: scrollTween,
+            }
+        });
+    } 
+};
+
+newsMedia(mql);
+mql.addEventListener('change', newsMedia, 500);
+
+// news scroller ends
 
 // beneficiaries scroller
 
@@ -87,38 +164,53 @@ function handleResize() {
 
 window.addEventListener('resize', handleResize)
 
-// news scroller
-var mql = window.matchMedia("(max-width: 785px)")
+// beneficiaries scroller ends
 
-function newsMedia(e) {
-    if (e.matches) {
-        let sections = document.querySelectorAll(".news__media--wrapper .media")[0];
-        let scrollTween = gsap.to(".news__media > .news__media--wrapper", {
-            x: -3 * sections.clientWidth,
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".news__section",
-                start: "-10% top",
-                end: '=+100',  
-                scrub: 1,
-                pin: true
-            }
-        });
+// our mission
 
-        gsap.to(".news__media > .news__media--wrapper", {
-            y: 0,
-            duration: 1,
-            scrollTrigger: {
-                trigger: ".news__section",
-                start: "left center",
-                containerAnimation: scrollTween,
-            }
-        });
-    } 
-};
+gsap.to(".hero.mission .hero__media", {
+    yPercent: -60,
+    xPercent: 10,
+    scale: 1.1,
+    ease: "ease",
+    scrollTrigger: {
+      trigger: ".mission__section",
+      start: '-20%',
+      scrub: true,
+      toggleActions: "restart none none none",
+    },
+});
 
-newsMedia(mql);
-mql.addEventListener('change', newsMedia, false);
+// our mission ends
+
+// Founder 
+
+gsap.from(".founder__section img", {
+    y: 600,
+    duration: 1,
+    ease: 'ease',
+    scrollTrigger: {
+        trigger: ".founder__media--container",
+        toggleActions: "restart none none none",
+    },
+    stagger: 0.3,
+});
+
+// Founder ends
+
+
+// gallery scroller
+
+gsap.from(".gallery__media--wrapper .media", {
+    y: 1200,
+    duration: 1,
+    ease: 'ease',
+    scrollTrigger: {
+        trigger: ".gallery__media--wrapper",
+        toggleActions: "restart none none none",
+    },
+    stagger: 0.3,
+});
 
 function galleryMedia(e) {
     if (e.matches) {
@@ -128,15 +220,15 @@ function galleryMedia(e) {
             ease: "none",
             scrollTrigger: {
                 trigger: ".gallery__section",
-                start: "100% top",
-                end: 'bottom',  
-                scrub: 2,
+                start: "-10%",
+                end: "20%",
+                scrub: 1,
             }
         });
 
         gsap.to(".gallery__media--wrapper", {
-            y: 80,
-            duration: 1,
+            y: 0,
+            duration: .5,
             scrollTrigger: {
                 trigger: ".gallery__section",
                 start: "left center",
@@ -147,4 +239,9 @@ function galleryMedia(e) {
 };
 
 galleryMedia(mql);
-mql.addEventListener('change', galleryMedia, false);
+mql.addEventListener('change', galleryMedia, 500);
+
+// gallery scroller ends
+
+
+// Footer Scroller

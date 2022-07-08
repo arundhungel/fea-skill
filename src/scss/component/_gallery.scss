@@ -33,15 +33,15 @@
             .media {
                 flex: 0 0 33.3333%;
                 max-width: 33.3333%;
-                
+
                 @include media-breakpoint-down(md) {   
-                    flex: 0 0 50%;
-                    max-width: 50%;
+                    flex: 0 0 70%;
+                    max-width: 70%;
                 }
 
                 @include media-breakpoint-down(sm) {   
-                    flex: 0 0 70%;
-                    max-width: 70%;
+                    flex: 0 0 90%;
+                    max-width: 90%;
                 }
 
                 &:first-child {
@@ -61,7 +61,7 @@
             }
 
             .media__img {
-                max-height: unset;
+                max-height: 320px;
             }
         }
     }
