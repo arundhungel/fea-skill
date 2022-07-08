@@ -132,7 +132,6 @@ function newsMedia(e) {
 
         $( window ).on( "load", function() {
             $(".news__media .news__media--wrapper-second").css("width", 3.5 * sections.clientWidth, "max-width",  3.5 * sections.clientWidth);
-            console.log(sections.clientWidth)
         });
     } 
 };

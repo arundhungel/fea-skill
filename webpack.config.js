@@ -16,6 +16,11 @@ module.exports = {
     clean: true,
     assetModuleFilename: 'images/[name][ext]',
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
   devtool: 'inline-source-map',
   devServer: {
     static: {
